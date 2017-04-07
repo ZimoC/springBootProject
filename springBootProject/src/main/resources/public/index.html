@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="http://demos.telerik.com/kendo-ui/grid/remote-data-binding">
+<style>
+html {
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+<title></title>
+<link rel="stylesheet"
+	href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.common-material.min.css" />
+<link rel="stylesheet"
+	href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.material.min.css" />
+<link rel="stylesheet"
+	href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.material.mobile.min.css" />
+
+<script src="https://kendo.cdn.telerik.com/2017.1.223/js/jquery.min.js"></script>
+<script
+	src="https://kendo.cdn.telerik.com/2017.1.223/js/kendo.all.min.js"></script>
+<a href="http://localhost:8080/"><button>Profile Fraction</button></a>
+<a href="http://localhost:8080/meter-result/meter.html"><button>Meter</button></a>
+</head>
+<body>
+
+	<div id="profileFraction">
+		<div id="grid"></div>
+		<script>
+                $(document).ready(function() {
+                    $("#grid").kendoGrid({
+                        dataSource: {
+                            type: "json",
+                            transport: {
+                                read: "http://localhost:8080/profile-fraction/"
+                            },
+                            schema: {
+                                model: {
+                                    fields: {
+                                        month: {  },
+                                        profile: { },
+                                        fraction: { type: "number" }
+                                        }
+                                }
+                            },
+                            pageSize: 20,
+                        },
+                     	filterable: true,
+                        sortable: true,
+                        pageable: true,
+                       columns: [{
+                    field: "month",
+                    title: "Month",
+                    width: 240
+                }, {
+                    field: "profile",
+                    title: "Profile"
+                }, {
+                    field: "fraction",
+                    title: "Fraction"
+                }]
+                    });
+                });
+            </script>
+	</div>
+<br/>
+</body>
+</html>

@@ -1,0 +1,25 @@
+MeterID,Profile,Month,Meter reading
+1,A,JAN,0
+1,A,FEB,1
+1,A,MAR,2
+1,A,APR,3
+1,A,MAY,4
+1,A,JUN,5
+1,A,JUL,6
+1,A,AUG,7
+1,A,SEP,8
+1,A,OCT,9
+1,A,NOV,10
+1,A,DEC,11
+1,B,JAN,0
+1,B,FEB,1
+1,B,MAR,2
+1,B,APR,1
+1,B,MAY,4
+1,B,JUN,5
+1,B,JUL,6
+1,B,AUG,7
+1,B,SEP,8
+1,B,OCT,9
+1,B,NOV,10
+1,B,DEC,11
